@@ -4,21 +4,30 @@
     <meta charset="utf-8">
     <title>IB LIFE</title>
   </head>
+  <style media="screen">
+    body {
+      background-color: #CC0000;
+    }
+  </style>
   <script>
     function pressbutton() {
-      document.getElementById('place').innerHTML="welcome to the IB";
+      document.getElementById('place').innerHTML="i love your pressy button more";
+      document.getElementById('button_3').innerHTML="no";
+    }
+    function pressbutton2() {
+      document.getElementById('place').innerHTML=document.getElementById(`place`) + "what the eh";
     }
   </script>
   <body>
     <p>
-      <button type="button" name="button" id="button_1" onclick="pressbutton()">Button</button>
+      <button type="button" name="button" id="button_1" onclick="pressbutton()">Press for no</button>
     </p>
     <p id="place">
 
     </p>
     <p>
-      hello
-      <button type="button" name="button">123</button>
+      This is to you
+      <button type="button" name="button" id="button_3" onclick="pressbutton2()">Love</button>
     </p>
   </body>
 </html>
