@@ -10,12 +10,14 @@
     }
   </style>
   <script>
+    var github = 0;
     function pressbutton() {
       document.getElementById('place').innerHTML="i love your pressy button more";
       document.getElementById('button_3').innerHTML="no";
     }
     function pressbutton2() {
-      document.getElementById('place').innerHTML=document.getElementById(`place`) + "what the eh";
+      document.getElementById('place').innerHTML=document.getElementById('place').innerHTML + "<br>" + "what the eh" + github;
+      github++;
     }
   </script>
   <body>
