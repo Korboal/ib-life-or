@@ -5,9 +5,20 @@
     <title>IB LIFE</title>
   </head>
   <script>
-    
+    function pressbutton() {
+      document.getElementById('place').innerHTML="story continues Ida came downstairs";
+    }
   </script>
   <body>
-    
+    <p>
+      <button type="button" name="button" id="button_1" onclick="pressbutton()">Button</button>
+    </p>
+    <p id="place">
+
+    </p>
+    <p>
+      hello
+      <button type="button" name="button">123</button>
+    </p>
   </body>
 </html>
