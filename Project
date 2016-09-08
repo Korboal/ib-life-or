@@ -6,7 +6,7 @@
   </head>
   <script>
     function pressbutton() {
-      document.getElementById('place').innerHTML="story continues Ida came downstairs";
+      document.getElementById('place').innerHTML="welcome to the IB";
     }
   </script>
   <body>
