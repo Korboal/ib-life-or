@@ -6,30 +6,32 @@
   </head>
   <style media="screen">
     body {
-      background-color: #CC0000;
+      background-color: #CCCCCC;
     }
   </style>
   <script>
-    var github = 0;
-    function pressbutton() {
-      document.getElementById('place').innerHTML="i love your pressy button more";
-      document.getElementById('button_3').innerHTML="no";
-    }
-    function pressbutton2() {
-      document.getElementById('place').innerHTML=document.getElementById('place').innerHTML + "<br>" + "what the eh" + github;
-      github++;
+    var story_text = ["It is start of IB", "Finally you progress", "That's so cool man"]; //variable to store story
+    var point = 0; //variable to store at which point of story we are in right now
+    function button_press(number) { //function to progress story
+      document.getElementById('button_1').innerHTML="Change of button 1"; //change of naming of button 1
+      document.getElementById('button_2').innerHTML="Change of button 2"; //change of naming of button 2
+      document.getElementById('button_3').innerHTML="Change of button 3"; //change of naming of button 3
+      document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + story_text[point]; //to add text to give to the user
+      point++; //progress of the story
     }
   </script>
   <body>
     <p>
-      <button type="button" name="button" id="button_1" onclick="pressbutton()">Press for no</button>
+      Hello!
     </p>
-    <p id="place">
+    <p id="story_line_text">
 
     </p>
     <p>
       This is to you
-      <button type="button" name="button" id="button_3" onclick="pressbutton2()">Love</button>
+      <button type="button" name="button" id="button_1" onclick="button_press(1)">Click to begin</button>
+      <button type="button" name="button" id="button_2" onclick="button_press(2)">Click to begin</button>
+      <button type="button" name="button" id="button_3" onclick="button_press(3)">Click to begin</button>
     </p>
   </body>
 </html>
