@@ -10,6 +10,7 @@
     }
   </style>
   <script>
+    var playing = true;
     var story_text = ["Welcome to the International Baccalaureate",
     "You have been accepted into two years of hard work.",
     "Are you sure you want to enter the IB?",
@@ -19,7 +20,6 @@
       document.getElementById('button_1').innerHTML="Button 1"; //change of naming of button 1
       document.getElementById('button_2').innerHTML="Button 2"; //change of naming of button 2
       document.getElementById('button_3').innerHTML="Button 3"; //change of naming of button 3
-      document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + story_text[point]; //to add text to give to the user
       switch (point) {
         case 0:
             document.getElementById('button_1').innerHTML="Click to proceed";
@@ -32,10 +32,25 @@
               document.getElementById('button_1').innerHTML="Yes, I do.";
               document.getElementById('button_2').innerHTML="No, I do not.";
           break;
+        case 3:
+              switch (number) {
+                case 2:
+                    document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + "Quit Game";
+                    playing = false;
+                  break;
+                default:
+
+              }
+          break;
           default:
+      }
+      if (playing) {
+        document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + story_text[point];       //to add text to give to the user
       }
       point++; //progress of the story
     }
+
+    
   </script>
   <body>
     <p>
