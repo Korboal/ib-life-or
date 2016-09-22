@@ -10,13 +10,25 @@
     }
   </style>
   <script>
-    var story_text = ["It is start of IB", "Finally you progress", "That's so cool man"]; //variable to store story
+    var story_text = ["It is start of IB", "Finally you progress", "That's so cool man", "You go to a meeting with the new IB group"]; //variable to store story
     var point = 0; //variable to store at which point of story we are in right now
     function button_press(number) { //function to progress story
       document.getElementById('button_1').innerHTML="Change of button 1"; //change of naming of button 1
       document.getElementById('button_2').innerHTML="Change of button 2"; //change of naming of button 2
       document.getElementById('button_3').innerHTML="Change of button 3"; //change of naming of button 3
       document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + story_text[point]; //to add text to give to the user
+      switch (point) {
+        case 0:
+            document.getElementById('button_1').innerHTML="dir";
+          break;
+        case 1:
+            document.getElementById('button_1').innerHTML="lol";
+          break;
+        case 2:
+              document.getElementById('button_1').innerHTML="sup";
+          break;
+          default:
+      }
       point++; //progress of the story
     }
   </script>
