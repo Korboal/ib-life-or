@@ -24,8 +24,7 @@
     function button_press(number) { //function to progress story
       document.getElementById('button_1').innerHTML="Button 1"; //change of naming of button 1
       document.getElementById('button_2').innerHTML="Button 2"; //change of naming of button 2
-      document.getElementById('button_3').innerHTML="Button 3"; //change of naming of button 3
-      switch (point) {
+          switch (point) {
         case 0:
             document.getElementById('button_1').innerHTML="Click to proceed";
           break;
@@ -55,7 +54,7 @@
       point++; //progress of the story
     }
 
-    
+
   </script>
   <body>
     <p>
@@ -68,8 +67,7 @@
       This is to you
       <button type="button" name="button" id="button_1" onclick="button_press(1)">Click to begin</button>
       <button type="button" name="button" id="button_2" onclick="button_press(2)">Click to begin</button>
-      <button type="button" name="button" id="button_3" onclick="button_press(3)">Click to begin</button>
-    </p>
+        </p>
         <p>
       <style type="text/css">
         #levelBar {
