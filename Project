@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <title>IB LIFE</title>
   </head>
-  <style media="screen">
-    body {
-      background-color: #CCCCCC;
+  <style type="text/css">
+    #topright {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   </style>
+  <a id="topright" href="#" title="TopRight">
+  <img src="http://www.ibo.org/globalassets/digital-tookit/logos-and-programme-models/ib-world-school-logo-1-colour.png" width="150" height="150"/>
+  </a>
   <script>
     var playing = true;
     var story_text = ["Welcome to the International Baccalaureate",
@@ -64,6 +69,34 @@
       <button type="button" name="button" id="button_1" onclick="button_press(1)">Click to begin</button>
       <button type="button" name="button" id="button_2" onclick="button_press(2)">Click to begin</button>
       <button type="button" name="button" id="button_3" onclick="button_press(3)">Click to begin</button>
+    </p>
+        <p>
+      <style type="text/css">
+        #levelBar {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      </style>
+      <div id="levelBar">
+        Study <progress id="Study" value="0" max="100"></progress>
+        <script>
+        var Study = document.getElementById("Study")
+        Study.value = Study.value (add, subtract, whatever.)
+        </script>
+        <br></br>
+        Social <progress id="Social" value="0" max="100"></progress>
+        <script>
+        var Social = document.getElementById("Social")
+        Social.value = Social.value (add, subtract, whatever.)
+        </script>
+        <br></br>
+        Sleep <progress id="Sleep" value="0" max="100"></progress>
+        <script>
+        var Sleep = document.getElementById("Sleep")
+        Sleep.value = Sleep.value (add, subtract, whatever.)
+        </script>
+      </div>
     </p>
   </body>
 </html>
