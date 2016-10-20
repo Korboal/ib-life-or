@@ -17,34 +17,59 @@
   <script>
     var playing = true;
     var story_text = ["Welcome to the International Baccalaureate",
-    "You have been accepted into two years of suffering.",
+    "You have been accepted into two years of hard work.",
     "Are you sure you want to enter the IB?",
-    "You go to a meeting with the new IB group"]; //variable to store story
+    "You go to a meeting with the new IB group",
+    "You were invited to the party",
+    "You are doing CAS and have to choose what to do",
+    "You are doing TOK presentation and decide to do it alone or in a group",
+    "You are doing EE",
+    "Weekend before exams",]; //variable to store story
     var point = 0; //variable to store at which point of story we are in right now
     function button_press(number) { //function to progress story
       document.getElementById('button_1').innerHTML="Button 1"; //change of naming of button 1
       document.getElementById('button_2').innerHTML="Button 2"; //change of naming of button 2
-          switch (point) {
+      switch (point) {
         case 0:
             document.getElementById('button_1').innerHTML="Click to proceed";
           break;
         case 1:
             document.getElementById('button_1').innerHTML="Click to proceed";
-
           break;
         case 2:
               document.getElementById('button_1').innerHTML="Yes, I do.";
-              document.getElementById('button_2').innerHTML="No, I do not.";
+              document.getElementById('button_2').innerHTML="No, I don't.";
           break;
         case 3:
-              switch (number) {
-                case 2:
-                    document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + "Quit Game";
-                    playing = false;
-                  break;
-                default:
-
+              if (number === 2) {
+                  document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + "Quit Game";
+                  playing = false;
               }
+              document.getElementById('button_1').innerHTML="Listen to the meeting.";
+              document.getElementById('button_2').innerHTML="Do not listen to the meeting.";
+          break;
+          case 4:
+              document.getElementById('button_1').innerHTML="Yes, I go";
+              document.getElementById('button_2').innerHTML="No, I don't go";
+            break;
+          case 5:
+              document.getElementById('button_1').innerHTML="Set up Christmas ball";
+              document.getElementById('button_2').innerHTML="Join Coding Club";
+            break;
+          case 6:
+              document.getElementById('button_1').innerHTML="Alone"
+              document.getElementById('button_2').innerHTML="In group"
+            break;
+          case 7:
+              document.getElementById('button_1').innerHTML="Focus on EE"
+              document.getElementById('button_2').innerHTML="Don't focus on EE"
+            break;
+          case 8:
+              document.getElementById('button_1').innerHTML="Study at night"
+              document.getElementById('button_2').innerHTML="Sleep"
+            break;
+          case 9:
+              playing = false;
           break;
           default:
       }
@@ -67,7 +92,7 @@
       This is to you
       <button type="button" name="button" id="button_1" onclick="button_press(1)">Click to begin</button>
       <button type="button" name="button" id="button_2" onclick="button_press(2)">Click to begin</button>
-        </p>
+    </p>
         <p>
       <style type="text/css">
         #levelBar {
