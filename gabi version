@@ -43,12 +43,10 @@
      "Weekend before exams",]; //variable to store story
      var point = 0; //variable to store at which point of story we are in right now
      function button_press(number) { //function to progress story
-       document.getElementById('button_1').innerHTML="Button 1"; //change of naming of button 1
-       document.getElementById('button_2').innerHTML="Button 2"; //change of naming of button 2
+       document.getElementById('button_1').innerHTML="Click to proceed"; //change of naming of button 1
+       document.getElementById('button_2').innerHTML="Click to proceed"; //change of naming of button 2
        switch (point) {
          case 0:
-             document.getElementById('button_1').innerHTML="Click to proceed";
-             document.getElementById('button_2').innerHTML="Click to proceed";
            break;
          case 1:
              document.getElementById('button_1').innerHTML="sigh.";
@@ -64,26 +62,26 @@
                   document.getElementById('button_1').innerHTML="Ok now I'm done";
                   document.getElementById('button_2').innerHTML="I don't think I will ever be done but I can't go back now";
                }
+               else {
+                 point++;
+               }
             break;
          case 4:
                document.getElementById('button_1').innerHTML="Yay!";
-               document.getElementById('button_2').innerHTML="Nay!";
+               document.getElementById('button_2').innerHTML="Nay! Let's quit the IB!";
              break;
          case 5:
                 if (number === 2) {
                   document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + "Quit Game";
                   playing = false;
+                  point = 99999;
                 }
                document.getElementById('button_1').innerHTML="ugh.";
                document.getElementById('button_2').innerHTML="UGH.";
              break;
          case 6:
-               document.getElementById('button_1').innerHTML="bUTTON 1";
-               document.getElementById('button_2').innerHTML="bUTTON 2";
              break;
          case 7:
-               document.getElementById('button_1').innerHTML="bUTTON 1";
-               document.getElementById('button_2').innerHTML="bUTTON 2";
              break;
          case 8:
                document.getElementById('button_1').innerHTML="Yes";
@@ -119,31 +117,36 @@
                document.getElementById('button_1').innerHTML="BRING ME THE ASIAN MODE!!"; //Maths FutherHigherLevel, Physics HL, Chemistry HL
                document.getElementById('button_2').innerHTML="IB SURVIVAL MODE!"; //Maths Studies, English B, Visual Arts
              break;
-         case 12:
+         case 13:
+               if (number === 1) {
+                 AsianMode = true;
+               }
                document.getElementById('button_1').innerHTML="Join the Christmas ball committee";
                document.getElementById('button_2').innerHTML="Join Coding Club";
              break;
-         case 13:
+         case 14:
                document.getElementById('button_1').innerHTML="Alone";
                document.getElementById('button_2').innerHTML="In group";
              break;
-         case 14:
-         //if chosen Asian mode in case 10
-               document.getElementById('button_1').innerHTML="Play big and go for Maths FurtherHigherLevel EE";
-               document.getElementById('button_2').innerHTML="Oh please you already chose Asian mode";
-        //if chosen safe mode in case 10
-                document.getElementById('button_1').innerHTML="Play big and chose maths EE";
-                document.getElementById('button_2').innerHTML="Play safe and chose literally any of the other subjects";
+         case 15:
+                if (AsianMode) {
+                  document.getElementById('button_1').innerHTML="Play big and go for Maths FurtherHigherLevel EE";
+                  document.getElementById('button_2').innerHTML="Oh please you already chose Asian mode";
+                }
+               else {
+                 document.getElementById('button_1').innerHTML="Play big and chose maths EE";
+                 document.getElementById('button_2').innerHTML="Play safe and chose literally any of the other subjects";
+               }
              break;
-          case 15:
+          case 16:
                 document.getElementById('button_1').innerHTML="Actually work";
                 document.getElementById('button_2').innerHTML="Let me procrastinate just a little bit";
              break;
-          case 16:
+          case 17:
                 document.getElementById('button_1').innerHTML="Study all night";
                 document.getElementById('button_2').innerHTML="BRING ME THE SLEEP!!!!";
              break;
-          case 17:
+          case 18:
                 playing = false;
             break;
            default:
