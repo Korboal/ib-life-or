@@ -63,7 +63,7 @@
                   document.getElementById('button_2').innerHTML="I don't think I will ever be done but I can't go back now";
                }
                else {
-                 point++;
+                 point++; //only change from the old UPDATED version except for the SSS values.
                }
             break;
          case 4:
@@ -210,4 +210,4 @@
        </div>
      </p>
    </body>
-</html>
+ </html>
