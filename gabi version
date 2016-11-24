@@ -53,7 +53,7 @@
            break;
          case 2:
              document.getElementById('button_1').innerHTML="I am done sighing, let's get on with it";
-             document.getElementById('button_2').innerHTML="I am not done sighing, get me another minute";
+             document.getElementById('button_2').innerHTML="I am not done sighing, give me another minute";
            break;
          case 3:
                if (number === 2) {
@@ -67,14 +67,10 @@
             break;
          case 4:
                document.getElementById('button_1').innerHTML="Yay!";
-               document.getElementById('button_2').innerHTML="Nay! Let's quit the IB!";
+               document.getElementById('button_2').innerHTML="Nay!";
+               Study.value = Study.value - 10;
              break;
          case 5:
-                if (number === 2) {
-                  document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + "Quit Game";
-                  playing = false;
-                  point = 99999;
-                }
                document.getElementById('button_1').innerHTML="ugh.";
                document.getElementById('button_2').innerHTML="UGH.";
              break;
