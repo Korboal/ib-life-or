@@ -33,7 +33,6 @@
      " ",
      "The IB coordinator is making a speech",
      "Do you choose to listen?",
-     " ",
      "It's the first weekend after school started, you were invited to an IB party, do you choose to go?",
      "You have to choose your IB subjects, do you wish to go Asian mode or IB survival mode?",
      "The deadline for CAS is approaching, you have to choose a CAS project to do",
@@ -58,7 +57,7 @@
            break;
          case 3:
                if (number === 2) {
-                  document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + "<br>" + " ";
+                  document.getElementById('story_line_text').innerHTML=document.getElementById('story_line_text').innerHTML + " ";
                   document.getElementById('button_1').innerHTML="Ok now I'm done";
                   document.getElementById('button_2').innerHTML="I don't think I will ever be done but I can't go back now";
                }
@@ -97,12 +96,10 @@
                window.confirm("Congratulations, you've made a new friend!")
                Social.value = Social.value + 10;
             }
-            break;
-         case 10:
                document.getElementById('button_1').innerHTML="Yes, I go";
                document.getElementById('button_2').innerHTML="No, I don't go";
              break;
-          case 11:
+          case 10:
                 if (number === 1) {
                 window.confirm("You made new friends in the party!!")
                 Social.value = Social.value + 10;
@@ -113,40 +110,40 @@
                 Study.value = Study.value + 10;
                 Social.value = Social.value - 10;
             }
-          case 12:
                document.getElementById('button_1').innerHTML="BRING ME THE ASIAN MODE!!"; //Maths FutherHigherLevel, Physics HL, Chemistry HL
                document.getElementById('button_2').innerHTML="IB SURVIVAL MODE!"; //Maths Studies, English B, Visual Arts
              break;
-         case 13:
-               if (number === 1) {
-                 AsianMode = true;
-               }
+         case 11:
                document.getElementById('button_1').innerHTML="Join the Christmas ball committee";
                document.getElementById('button_2').innerHTML="Join Coding Club";
+               if (number === 1) {
+                 AsianMode = true;
+                 alert("Asian mode activated");
+               }
              break;
-         case 14:
+         case 12:
                document.getElementById('button_1').innerHTML="Alone";
                document.getElementById('button_2').innerHTML="In group";
              break;
-         case 15:
+         case 13:
                 if (AsianMode) {
                   document.getElementById('button_1').innerHTML="Play big and go for Maths FurtherHigherLevel EE";
                   document.getElementById('button_2').innerHTML="Oh please you already chose Asian mode";
                 }
                else {
-                 document.getElementById('button_1').innerHTML="Play big and chose maths EE";
-                 document.getElementById('button_2').innerHTML="Play safe and chose literally any of the other subjects";
+                 document.getElementById('button_1').innerHTML="Play big and choose maths EE";
+                 document.getElementById('button_2').innerHTML="Play safe and choose literally any of the other subjects";
                }
              break;
-          case 16:
+          case 14:
                 document.getElementById('button_1').innerHTML="Actually work";
                 document.getElementById('button_2').innerHTML="Let me procrastinate just a little bit";
              break;
-          case 17:
+          case 15:
                 document.getElementById('button_1').innerHTML="Study all night";
                 document.getElementById('button_2').innerHTML="BRING ME THE SLEEP!!!!";
              break;
-          case 18:
+          case 16:
                 playing = false;
             break;
            default:
