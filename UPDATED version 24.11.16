@@ -105,7 +105,7 @@
                 Social.value = Social.value + 10;
                 Study.value = Study.value - 10;
             }
-              else {
+               else {
                 window.confirm("You stayed at home to study. What a nerd.")
                 Study.value = Study.value + 10;
                 Social.value = Social.value - 10;
@@ -122,10 +122,21 @@
                document.getElementById('button_2').innerHTML="Join Coding Club";
              break;
          case 13:
+               if (number === 1) {
+                 Social.value = Social.value + 10;
+                 Study.value = Study.value -5;
+               } else {
+                 Study.value = Study.value + 5;
+                 Social.value = Social value - 5;
+               }
                document.getElementById('button_1').innerHTML="Alone";
                document.getElementById('button_2').innerHTML="In group";
              break;
          case 14:
+                if (number === 2) {
+                   Social.value = Social.value + 5;
+               }
+               
                 if (AsianMode) {
                   document.getElementById('button_1').innerHTML="Play big and go for Maths FurtherHigherLevel EE";
                   document.getElementById('button_2').innerHTML="Oh please you already chose Asian mode";
@@ -140,6 +151,12 @@
                 document.getElementById('button_2').innerHTML="Let me procrastinate just a little bit";
              break;
           case 16:
+                if (number === 1) {
+                        Study.value = Study.value + 10;
+                      }
+                      else {
+                        Study.value = Study.value - 10;
+                }
                 document.getElementById('button_1').innerHTML="Study all night";
                 document.getElementById('button_2').innerHTML="BRING ME THE SLEEP!!!!";
              break;
@@ -147,10 +164,10 @@
                 if (number === 1) {
                      Study.value = Study.value + 10;
                      Sleep.value = Sleep.value -5;
-                  }
+                }
                     else {
                      Sleep.value = Sleep.value + 10;
-                  }
+                }
                 playing = false;
             break;
            default:
