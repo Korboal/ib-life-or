@@ -40,7 +40,9 @@
      "You are doing TOK presentation, do you decide to do it alone or in a group?",
      "You are doing your EE, do you wish to play safe or do you wish to play big?",
      "Now the EE week comes, do you actually work or do you choose to procrastinate?",
-     "Weekend before exams"
+     "Weekend before exams",
+     "You will now enter the feared week of IB exams",
+     " "
      ]; //variable to store story
      var point = 0; //variable to store at which point of story we are in right now
      function button_press(number) { //function to progress story
@@ -170,6 +172,23 @@
                     else {
                      Sleep.value = Sleep.value + 10;
                 }
+                
+                document.getElementById('button_1').innerHTML="Panic attack";
+                document.getElementById('button_2').innerHTML="MAJOR PANIC ATTACK";
+            break;
+          case 18:
+              if (Study.value === 100){
+                alert("You have received a 45 points IB Diploma!!!");
+              }
+              else if (Study.value >= 30 && Study.value < 100) {//get the IB diploma
+                alert("You have recieved the IB Diploma!!");
+              } else {//fail the IB diploma
+                alert("You have failed. See ya in 4IB.");
+              }
+
+              if (Social.value === 0){
+                alert("You are a loner and have no friends");
+              }
                 playing = false;
             break;
            default:
