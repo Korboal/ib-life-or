@@ -40,7 +40,8 @@
      "You are doing TOK presentation, do you decide to do it alone or in a group?",
      "You are doing your EE, do you wish to play safe or do you wish to play big?",
      "Now the EE week comes, do you actually work or do you choose to procrastinate?",
-     "Weekend before exams",]; //variable to store story
+     "Weekend before exams"
+     ]; //variable to store story
      var point = 0; //variable to store at which point of story we are in right now
      function button_press(number) { //function to progress story
        document.getElementById('button_1').innerHTML="Click to proceed"; //change of naming of button 1
@@ -127,7 +128,7 @@
                  Study.value = Study.value -5;
                } else {
                  Study.value = Study.value + 5;
-                 Social.value = Social value - 5;
+                 Social.value = Social.value - 5;
                }
                document.getElementById('button_1').innerHTML="Alone";
                document.getElementById('button_2').innerHTML="In group";
