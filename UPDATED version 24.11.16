@@ -70,6 +70,7 @@
          case 4:
                document.getElementById('button_1').innerHTML="Yay!";
                document.getElementById('button_2').innerHTML="Nay!";
+               break;
          case 5:
                if (number === 1) {
                  Study.value = Study.value - 5;
