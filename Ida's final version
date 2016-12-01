@@ -39,7 +39,9 @@
      "You are doing TOK presentation, do you decide to do it alone or in a group?",
      "You are doing your EE, do you wish to play safe or do you wish to play big?",
      "Now the EE week comes, do you actually work or do you choose to procrastinate?",
-     "Weekend before exams",]; //variable to store story
+     " ",
+     "Weekend before exams",
+     "You will now enter the feared week of IB exams"]; //variable to store story
      var point = 0; //variable to store at which point of story we are in right now
      function button_press(number) { //function to progress story
        document.getElementById('button_1').innerHTML="Click to proceed"; //change of naming of button 1
@@ -150,7 +152,7 @@
                 document.getElementById('button_1').innerHTML="Actually work";
                 document.getElementById('button_2').innerHTML="Let me procrastinate just a little bit";
              break;
-          case 15:
+          case 16:
                 if (number === 1) {
                   Study.value = Study.value + 10;
                 }
@@ -160,13 +162,23 @@
                 document.getElementById('button_1').innerHTML="Study all night";
                 document.getElementById('button_2').innerHTML="BRING ME THE SLEEP!!!!";
              break;
-          case 16:
-                if (number === 1) {
-                  Study.value = Study.value + 10;
-                }
-                else {
-                  Sleep.value = Sleep.value + 10;
-                }
+          case 17:
+               if (number === 1) {
+                 Study.value = Study.value + 10;
+               }
+               else {
+                 Sleep.value = Sleep.value + 10;
+               }
+                document.getElementById('button_1').innerHTML="Panic attack";
+                document.getElementById('button_2').innerHTML="MAJOR PANIC ATTACK";
+            break;
+          case 18:
+              if (Study.value >= 50) {//get the IB diploma
+                alert("You have recieved the IB Diploma!!!!!");
+              } else {//fail the IB diploma
+                alert("You failed. Try again.");
+              }
+              playing = false;
             break;
            default:
        }
